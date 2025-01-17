@@ -1,34 +1,47 @@
-# Big data: A spark project and transfer learning project with keras
+# Big Data: Spark Traffic Analysis and Keras Transfer Learning Project
 
-## Projet Spark : Prévision de trafic
+## Railway Traffic Prediction using Spark
 
-Ce projet vise à analyser (catégorie de titre, fluctuation du trafic, impact du confinement) le trafic sur le réseau ferré de la région île-de-France en utilisant Apache Spark pour analyser des données de validation de titres de transport. Dans la suite, nous essayons de modéliser le trafic dans les 7 prochinas jours. 
+This project analyzes public transportation traffic patterns in the Île-de-France region (Paris metropolitan area) using Apache Spark to process ticket validation data. The analysis focuses on ticket categories, traffic fluctuations, and the impact of COVID-19 lockdowns. Additionally, the project implements a 7-day traffic prediction model.
 
-## Objectifs
+## Project Objectives
 
-1. **Collecte des données** : Récupérer et traiter des données de validation quotidiennes provenant du portail Open Data de Mobilités île-de-France.
-2. **Analyse préliminaire** : Explorer les données pour constituer un historique de 2019 à 2021.
-3. **Préparation et traitement** : Nettoyer et préparer les données pour la modélisation.
+1. **Data Collection**: Retrieve and process daily validation data from the Île-de-France Mobility Open Data portal
+2. **Exploratory Data Analysis**: Analyze historical data from 2019 to 2021
+3. **Data Processing**: Clean and prepare data for predictive modeling
+4. **Traffic Forecasting**: Develop models to predict passenger flow
 
-## Prérequis
+## Technical Requirements
 
-- **Python 3.7+**
-- **Apache Spark** (PySpark)
-- Google Colab ou une installation locale avec les modules nécessaires
-- Accès à Internet pour télécharger les données
+- Python 3.7 or higher
+- Apache Spark (PySpark)
+- Development Environment Options:
+  - Google Colab (recommended for easy setup)
+  - Local installation with required dependencies
+- Internet connection for data downloads
+- Sufficient storage space for large datasets
 
-## Analyse des données
+## Data Analysis Pipeline
 
-### Exploration initiale
-- Identifier les colonnes disponibles et leurs types.
-- Détecter les valeurs manquantes ou anomalies.
+### Initial Data Exploration
+- Column identification and data type analysis
+- Missing value detection and anomaly identification
+- Data quality assessment and validation
 
-### Constitution d’un historique
-- Fusionner les données des semestres pour créer un ensemble complet.
+### Historical Data Construction
+- Merging semester-based datasets into a unified timeline
+- Data normalization and standardization
+- Temporal alignment of different data sources
 
-### Statistiques descriptives
-- Calculer les moyennes, médianes et tendances des validations.
+### Statistical Analysis
+- Calculation of key metrics:
+  - Daily, weekly, and monthly passenger volumes
+  - Peak hour patterns
+  - Seasonal trends
+  - Impact analysis of special events and lockdowns
 
-## Conclusion
-
-Ce projet démontre l'utilisation d'Apache Spark pour analyser des volumes importants de données et extraire des informations pertinentes sur le trafic.
+## Model Development
+- Time series analysis
+- Feature engineering for prediction
+- Implementation of forecasting models
+- Model validation and performance metrics
